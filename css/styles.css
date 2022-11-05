@@ -5,6 +5,7 @@
     --black-color: #000;
     --secondary-color: #757575;
     --rare-grey-color: #F5F4FA;
+    --primary-background-color: #2F303A
 }
 
 body {
@@ -152,9 +153,15 @@ p {
 
 /* Hero */
 
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: var(--primary-background-color);
+}
+
 .hero-title {
-    /* Тemporary background */
-    background-color: var(--secondary-color);
+    width: 696px;
+    margin: 0 auto 30px;
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
@@ -162,7 +169,6 @@ p {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .hero-button {
@@ -225,6 +231,10 @@ p {
 
 /* Teams list */
 
+.section.team {
+    background-color: var(--rare-grey-color);
+}
+
 .team-descr {
     padding-top: 30px;
     padding-bottom: 30px;   
@@ -234,27 +244,31 @@ p {
     text-align: center;
     color: var(--secondary-color);
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.19;
 }
 
 .team-list .name {
+    margin-bottom: 10px;
     text-align: center;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.19;
 }
 
 /* Footer */
+
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--primary-background-color);
+}
 
 .contacts {
     margin-top: 20px;
 }
 
 .logo.footer {
-    /* Тemporary background */
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    
+    color: var(--white-color);    
 }
 
 .contacts-list .item + .item {
@@ -262,21 +276,17 @@ p {
 }
 
 .contacts-list .address {
-    /* Тemporary background */
-    background-color: var(--secondary-color);
     color: var(--white-color);
     font-style: normal;
-    line-height: 1.71;
+    line-height: 1.15;
     text-decoration: none;
 }
 
 .contacts-list .mail,
 .contacts-list .tel {
-    /* Тemporary background */
-    background-color: var(--secondary-color);
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
-    line-height: 1.71;
+    line-height: 1.15;
     text-decoration: none;
 }
 
@@ -325,7 +335,6 @@ p {
 
 .projects-item {
     width: calc((100% - 60px)/3);
-    border-bottom: 1px solid #EEEEEE;
 }
 
 .projects-main {
@@ -335,7 +344,10 @@ p {
 .projects-descr {
     display: block;
     padding-top: 20px;
+    padding-right: auto;
     padding-bottom: 20px;
+    padding-left: 24px;
+    border: 1px solid #EEEEEE;
 }
 
 .projects-title {
