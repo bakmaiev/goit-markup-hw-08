@@ -14,6 +14,25 @@ body {
     letter-spacing: 0.03em;
 }
 
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .list {
     list-style: none;
 }
@@ -22,7 +41,21 @@ body {
     text-decoration: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .logo {
+    margin-right: 93px;
     color: var(--black-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -36,11 +69,62 @@ body {
     color: var(--accent-color);
 }
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 94px 0;
+}
+
+.activities {
+    padding-top: 0;
+}
+
 /* Site Navigation */
 
-.site-nav .link,
-.header-contacts .link {
+.page-header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.header-nav {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+    text-align: center;
+}
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: var(--primary-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    display: block;
+    letter-spacing: 0.02em;
+}
+
+.header-contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--secondary-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -58,6 +142,14 @@ body {
     color: var(--accent-color);
 }
 
+.site-nav .item:not(:last-child),
+.header-contacts .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+
+
+
 /* Hero */
 
 .hero-title {
@@ -69,11 +161,20 @@ body {
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .hero-button {
+    display: block;
+    margin: 30px auto 0;
+    min-width: 216px;
+    height: 50px;
     background-color: var(--accent-color);
     color: var(--white-color);
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     font-family: inherit;
     font-weight: 700;
@@ -85,12 +186,27 @@ body {
 /* Features list */
 
 .section-title {
+    margin-bottom: 50px;
+    text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
 }
 
+.features-list,
+.activities-list,
+.team-list {
+    display: flex;
+    gap: 30px;
+}
+
+.features-list .item,
+.team-list .item {
+    width: calc((100% - 60px)/4);
+}
+
 .features-list .title {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -101,15 +217,28 @@ body {
     line-height: 1.71;
 }
 
+/* Activities list */
+
+.activities-list .item {
+    width: calc((100% - 60px)/3);
+}
+
 /* Teams list */
 
-.section-list .descr {
+.team-descr {
+    padding-top: 30px;
+    padding-bottom: 30px;   
+}
+
+.team-list .descr {
+    text-align: center;
     color: var(--secondary-color);
     font-size: 16px;
     line-height: 1.9;
 }
 
-.section-list .name {
+.team-list .name {
+    text-align: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
@@ -117,11 +246,19 @@ body {
 
 /* Footer */
 
+.contacts {
+    margin-top: 20px;
+}
+
 .logo.footer {
     /* Тemporary background */
     background-color: var(--secondary-color);
     color: var(--white-color);
     
+}
+
+.contacts-list .item + .item {
+    margin-top: 9px;
 }
 
 .contacts-list .address {
@@ -152,8 +289,20 @@ body {
 
 /* Portfolio Page*/
 
+.filter {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-item {
+    margin-right: 8px;
+}
+
 .filter-button {
+    padding: 6px 22px;
     background-color: var(--rare-grey-color);
+    border-radius: 4px;
+    border: none;
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
@@ -168,7 +317,29 @@ body {
     font-family: inherit;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects-item {
+    width: calc((100% - 60px)/3);
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.projects-main {
+    margin-top: 50px;
+}
+
+.projects-descr {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .projects-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
