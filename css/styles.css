@@ -429,14 +429,11 @@ p {
 
 .footer-wrap {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-address {
     margin-right: 70px;
-}
-
-.footer-social-media {
-    padding-top: 12px;
 }
 
 .footer-action-text {
@@ -522,8 +519,12 @@ p {
     width: calc((100% - 60px)/3);
 }
 
-.projects-item:hover {
-    border: 1px solid #EEEEEE;
+.projects-link {
+    display: block;
+}
+
+.projects-link:hover,
+.projects-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -546,6 +547,7 @@ p {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--primary-text-color);
 }
 
 .projects-text {
