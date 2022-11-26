@@ -374,15 +374,15 @@
                 <p class="footer-action-text">Підпишіться на розсилку</p>
                 <form class="footer-form">
                     <label> 
-                        <input type="email" name="mail" placeholder="E-mail">
+                        <input class="footer-input" type="email" name="mail" placeholder="E-mail">
                     </label>
+                    <button type="submit" class="footer-form-btn">
+                        <p class="footer-btn-text">Підписатися</p>
+                        <svg class="footer-form-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
                 </form>
-                <button type="submit" class="footer-form-btn">
-                    <p class="footer-btn-text">Підписатися</p>
-                    <svg class="footer-form-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
-                </button>
             </div>
             
         </div>
@@ -396,32 +396,44 @@
             </svg>
            </button>
 
-           <form >
-                <label>
-                    Ім'я
-                    <input type="text" name="name">
-                </label>
-                <br>
-                <label>
-                    Телефон
-                    <input type="tel" name="tel">
-                </label>
-                <br>
-                <label>
-                    Пошта
-                    <input type="email" name="mail">
-                </label>
-                <br>
-                <label>
-                    <textarea name="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
-                </label>
-                <br>
-                <label>
-                    <input type="checkbox" name="top" value="agree">
-                    Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a>
-                </label>
-                <br>
-                <button type="submit">Відправити</button>
+           <form class="form-modal">
+                <p class="primary-form-text">Залиште свої дані, ми вам передзвонимо</p>
+                <div class="form-field">
+                    <label class="form-label">
+                        Ім'я
+                        <input class="form-input" type="text" name="name">
+                    </label>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">
+                        Телефон
+                        <input class="form-input" type="tel" name="tel">
+                    </label>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">
+                        Пошта
+                        <input class="form-input" type="email" name="mail">
+                    </label>
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">
+                        Коментар
+                        <textarea class="form-input" name="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
+                    </label>
+                </div>
+                
+                <div class="form-field">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="top" value="agree">
+                        Погоджуюся з розсилкою та приймаю <a class="policy link" href="#">Умови договору</a>
+                    </label>
+                </div>
+                
+                <button class="modal-btn" type="submit">Відправити</button>
             </form>
         </div>
     </div>
