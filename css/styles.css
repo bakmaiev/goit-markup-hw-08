@@ -776,24 +776,25 @@ p {
 
 .checkbox-icon {
     display: inline-block;
-    fill: #000;
-}
-
-/* .checkbox-label::after {
-    content: '';
-    display: inline-block;
+    box-sizing: border-box;
     margin-right: 7px;
     width: 16px;
     height: 15px;
-    border: 1px solid var(--primary-text-color);
-} */
+    border: 2px solid #000000;
+    border-radius: 2px;
+    fill: var(--white-color);
+    cursor: pointer;
+    transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.checkbox {
-    appearance: none;
-    position: absolute;
+.checkbox:checked + .checkbox-icon {
+    fill: var(--white-color);
+    background-color: var(--accent-color);
+    border: none;
 }
 
 .policy {
+    position: relative;
     color: var(--accent-color);
 }
 
@@ -842,6 +843,17 @@ p {
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+}
+
+.policy::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: var(--accent-color);
+    width: 114px;
+    height: 1px;
 }
 
 .modal-btn {
