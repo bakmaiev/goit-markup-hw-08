@@ -2,6 +2,10 @@
     padding-top: 0;
 }
 
+.activities-list {
+    @extend %list;
+}
+
 .activities-list__item {
     position: relative;
     width: calc((100% - 60px)/3);

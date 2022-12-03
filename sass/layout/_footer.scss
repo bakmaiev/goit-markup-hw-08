@@ -37,7 +37,7 @@
     }
 }
 
-.container--baseline {
+.page-footer__container {
     display: flex;
     align-items: baseline;
 }
@@ -120,6 +120,7 @@
 }
 
 .footer-form__btn {
+    @extend %button;
     display: flex;
     gap: 10px;
     justify-content: center;

@@ -2,6 +2,10 @@
     background-color: var(--rare-grey-color);
 }
 
+.team-list {
+    @extend %list;
+}
+
 .team-list__descr {
     padding-top: 30px;
     padding-bottom: 30px;

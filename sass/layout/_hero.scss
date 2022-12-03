@@ -23,6 +23,7 @@
 }
 
 .hero__button {
+    @extend %button;
     display: block;
     margin: 30px auto 0;
     min-width: 216px;

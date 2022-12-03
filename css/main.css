@@ -34,7 +34,6 @@ h3,
 h4,
 h5,
 h6,
-ul,
 p {
   margin: 0;
   padding: 0;
@@ -82,7 +81,7 @@ body {
   color: var(--accent-color);
 }
 
-.button {
+.footer-form__btn, .hero__button, .form-modal__btn {
   background-color: var(--accent-color);
   color: var(--white-color);
   border-radius: 4px;
@@ -237,7 +236,7 @@ body {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: none;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-modal__input:focus {
@@ -286,12 +285,25 @@ body {
   transform: translate(-50%, -50%) scale(0);
 }
 
+.section__title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.clients-list, .team-list, .activities-list, .features-list {
+  display: flex;
+  gap: 30px;
+}
+
 .page-header {
   position: relative;
   border-bottom: 1px solid #ECECEC;
 }
 
-.container--flex {
+.page-header__container {
   display: flex;
 }
 
@@ -405,13 +417,6 @@ body {
   margin: 30px auto 0;
   min-width: 216px;
   height: 50px;
-}
-
-.features-list,
-.activities-list,
-.team-list {
-  display: flex;
-  gap: 30px;
 }
 
 .features-list__item {
@@ -548,9 +553,7 @@ body {
 }
 
 .clients-list {
-  display: flex;
   justify-content: center;
-  gap: 30px;
 }
 
 .clients-list__item {
@@ -620,7 +623,7 @@ body {
   color: var(--accent-color);
 }
 
-.container--baseline {
+.page-footer__container {
   display: flex;
   align-items: baseline;
 }

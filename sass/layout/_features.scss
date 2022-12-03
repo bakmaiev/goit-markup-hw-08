@@ -1,8 +1,5 @@
-.features-list,
-.activities-list,
-.team-list {
-    display: flex;
-    gap: 30px;
+.features-list {
+    @extend %list;
 }
 
 .features-list__item {

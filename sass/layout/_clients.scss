@@ -1,7 +1,6 @@
 .clients-list {
-    display: flex;
+    @extend %list;
     justify-content: center;
-    gap: 30px;
 }
 
 .clients-list__item {
