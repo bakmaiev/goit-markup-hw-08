@@ -1,12 +1,6 @@
 .clients-list {
     // @extend %list;
-    @media screen and (max-width: 767px) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-    };
-
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 767px), (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
