@@ -1,11 +1,43 @@
 .clients-list {
-    @extend %list;
-    justify-content: center;
+    // @extend %list;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    };
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    };
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
 }
 
 .clients-list__item {
-    width: 170px;
-    height: 92px;
+    @media screen and (max-width: 767px) {
+            width: calc((100% - 30px)/2);
+            height: 92px;
+        }
+    
+        ;
+    
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 60px)/3);
+            height: 92px;
+        }
+    
+        ;
+    
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+            height: 92px;
+        }
 }
 
 .clients-list__link {

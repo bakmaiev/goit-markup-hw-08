@@ -61,10 +61,24 @@ body {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -293,7 +307,7 @@ body {
   line-height: 1.17;
 }
 
-.clients-list, .team-list, .activities-list, .features-list {
+.team-list, .activities-list {
   display: flex;
   gap: 30px;
 }
@@ -419,8 +433,35 @@ body {
   height: 50px;
 }
 
-.features-list__item {
-  width: calc((100% - 60px) / 4);
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .features-list__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    width: calc((100% - 120px) / 4);
+  }
 }
 .features-list__item::before {
   content: "";
@@ -463,6 +504,11 @@ body {
 
 .activities {
   padding-top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .activities {
+    display: none;
+  }
 }
 
 .activities-list__item {
@@ -552,13 +598,45 @@ body {
   fill: var(--white-color);
 }
 
-.clients-list {
-  justify-content: center;
+@media screen and (max-width: 767px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
 }
 
-.clients-list__item {
-  width: 170px;
-  height: 92px;
+@media screen and (max-width: 767px) {
+  .clients-list__item {
+    width: calc((100% - 30px) / 2);
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    width: calc((100% - 60px) / 3);
+    height: 92px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    width: 170px;
+    height: 92px;
+  }
 }
 
 .clients-list__link {
