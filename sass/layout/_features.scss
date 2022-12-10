@@ -27,8 +27,6 @@
         width: calc((100% - 90px)/4);
     }
 
-
-
     &::before {
     content: '';
     display: block;
@@ -40,6 +38,13 @@
     margin-bottom: 30px;
 }
 }
+
+.features-list__item:last-child {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 0;
+    } 
+}
+
 
 .features-list__title {
     margin-bottom: 10px;
