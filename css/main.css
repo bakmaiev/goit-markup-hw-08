@@ -474,6 +474,22 @@ body {
   fill: var(--accent-color);
 }
 
+.page-header__menu-toggle {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .page-header__menu-toggle {
+    display: none;
+  }
+}
+
 .hero {
   max-width: 480px;
   margin: 0 auto;
