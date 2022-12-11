@@ -43,10 +43,13 @@
 }
 
 .page-footer__address {
+    text-align: center;
+    margin-bottom: 60px;
     // margin-right: 70px;
 }
 
 .page-footer__action-text {
+    text-align: center;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -90,17 +93,24 @@
 }
 
 .page-footer__form-thumb {
+    margin-top: 60px;
     // margin-left: auto;
 }
 
 .footer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     // display: flex;
     // gap: 12px;
 }
 
 .footer-form__input {
-    width: 358px;
+    // width: 358px;
+    max-width: 450px;
     height: 50px;
+    align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 10px;
