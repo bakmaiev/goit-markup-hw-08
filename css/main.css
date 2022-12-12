@@ -502,6 +502,11 @@ body {
   padding-left: 25px;
   padding-right: 25px;
   background-color: var(--white-color);
+  transform: translate(100%);
+  transition: transform 250ms ease-in-out;
+}
+.page-header__mob-menu.is-open {
+  transform: translateX(0);
 }
 
 .page-header__menu-close {
@@ -574,7 +579,7 @@ body {
 .mob-social__item {
   position: relative;
 }
-.mob-social__item::after {
+.mob-social__item:not(:last-child):after {
   content: "";
   position: absolute;
   top: 50%;

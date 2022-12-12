@@ -25,16 +25,16 @@
     padding-left: 25px;
     padding-right: 25px;
     background-color: var(--white-color);
+    transform: translate(100%);
+    transition: transform 250ms ease-in-out;
 
     // & .icon-cross {
     //     display: none;
     // };
 
-    // &.is-open {
-    //     .icon-cross {
-    //      display: block;
-    //    } 
-    // };
+    &.is-open {
+        transform: translateX(0);
+    };
 
     // &.is-open {
     //     .icon-menu {
@@ -111,7 +111,7 @@
 
 .mob-social__item {
     position: relative;
-    &::after {
+    &:not(:last-child):after {
             content: '';
             position: absolute;
             top: 50%;
