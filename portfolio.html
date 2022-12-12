@@ -13,7 +13,7 @@
 
 <body>
     <!--Шапка сторінки-->
-    <!-- <header class="page-header">
+    <header class="page-header">
         <div class="container page-header__container">
             <nav class="page-header__nav">
                 <a href="./index.html" class="logo"><span class="logo--accent">Web</span>Studio</a>
@@ -29,7 +29,7 @@
                     </li>
                 </ul>
             </nav>
-    
+
             <ul class="header-contacts">
                 <li class="header-contacts__item">
                     <a class="header-contacts__link" href="mailto:info@devstudio.com">
@@ -48,8 +48,64 @@
                     </a>
                 </li>
             </ul>
+
+            <button type="button" class="page-header__menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="page-header__menu-btn" width="40" height="40" aria-label="Перемикач меню">
+                    <use class="icon-menu" href="./images/icons.svg#icon-open-menu"></use>
+                </svg>
+            </button>
+
+            <div class="container page-header__mob-menu js-menu-container" id="mobile-menu">
+                <button type="button" class="page-header__menu-close js-close-menu">
+                    <svg class="page-header__menu-btn" width="40" height="40" aria-label="Перемикач меню">
+                        <use class="icon-cross" href="./images/icons.svg#icon-close-menu"></use>
+                    </svg>
+                </button>
+
+                <nav class="page-header__mob-nav">
+                    <ul class="mob-nav">
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link" href="./index.html">Студія</a>
+                        </li>
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link mob-nav__link--active" href="./portfolio.html">Портфоліо</a>
+                        </li>
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link" href="/">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <ul class="mob-contacts">
+                    <li class="mob-contacts__item">
+                        <a class="mob-contacts__link" href="tel:+380961111111">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="mob-mail__item">
+                        <a class="mob-mail__link" href="mailto:info@devstudio.com">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="mob-social">
+                    <li class="mob-social__item">
+                        <a href="#" class="mob-social_link">Instagram</a>
+                    </li>
+                    <li class="mob-social__item">
+                        <a href="#" class="mob-social_link">Twitter</a>
+                    </li>
+                    <li class="mob-social__item">
+                        <a href="#" class="mob-social_link">Facebook</a>
+                    </li>
+                    <li class="mob-social__item">
+                        <a href="#" class="mob-social_link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header> -->
+    </header>
 
     <!--Унікальний контент сторінки-->
     <main>
@@ -57,7 +113,7 @@
             <div class="container">
                 <h1 class="visually-hidden">Портфоліо студії</h1>
                     <!-- Фільтр -->
-                    <!-- <div class="filter-main">
+                    <div class="filter-main">
                         <ul class="filter">
                             <li class="filter__item">
                                 <button type="button" class="filter__button">Усі</button>
@@ -75,7 +131,7 @@
                                 <button type="button" class="filter__button">Маркетинг</button>
                             </li>
                         </ul>
-                    </div> -->
+                    </div>
                     <!-- Проєкти -->
                     <div class="projects-main">
                         <ul class="projects">
@@ -203,7 +259,7 @@
     </main>
 
     <!--Підвал сторінки-->
-    <!-- <footer class="page-footer">
+    <footer class="page-footer">
         <div class="container page-footer__container">
     
             <div class="page-footer__address">
@@ -274,7 +330,14 @@
             </div>
     
         </div>
-    </footer> -->
+    </footer>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

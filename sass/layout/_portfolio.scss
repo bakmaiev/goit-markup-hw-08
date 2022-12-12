@@ -1,10 +1,17 @@
 .filter {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    };
 }
 
-.filter__item {
-    margin-right: 8px;
+.filter-main {
+    @media screen and (max-width: 767px) {
+        max-width: 326px;
+    };
 }
 
 .filter__button {
@@ -89,7 +96,10 @@
 }
 
 .projects-main {
-    margin-top: 50px;
+    margin-top: 40px;
+    @media screen and (min-width: 768px) {
+        margin-top: 50px;
+    };
 }
 
 .projects__descr {
