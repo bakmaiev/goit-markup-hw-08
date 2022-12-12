@@ -496,6 +496,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 25px;
@@ -525,7 +526,7 @@ body {
   margin-bottom: 302px;
 }
 
-.mob-nav__item {
+.mob-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -545,7 +546,7 @@ body {
   margin-bottom: 64px;
 }
 
-.mob-contacts__item {
+.mob-contacts__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -563,6 +564,19 @@ body {
   line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+}
+
+.mob-social {
+  display: flex;
+  gap: 10px;
+}
+
+.mob-social_link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .hero {
