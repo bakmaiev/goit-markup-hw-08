@@ -26,7 +26,7 @@
         max-width: 450px;
     }   
 
-    @media screen and (min-width:1200px) {
+    @include desctop {
         width: 528px;
         height: 581px;
     }
@@ -65,11 +65,11 @@
         max-width: 370px;
     };
 
-    @media screen and (min-width:480px) {
+    @include mobile {
         width: 370px;
     };
 
-    @media screen and (min-width:1200px) {
+    @include desctop {
         width: 448px; 
     }
 }
@@ -82,7 +82,7 @@
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     margin-bottom: 12px;
-    @media screen and (min-width:1200px) {
+    @include desctop {
         line-height: 1.15;
     }
 }
@@ -106,7 +106,7 @@
     letter-spacing: 0.03em;
     color: var(--secondary-color);
 
-    @media screen and (min-width:1200px) {
+    @include desctop {
         font-size: 14px;
         line-height: 1.71; 
     }
@@ -157,7 +157,7 @@
             }
     } 
 
-    @media screen and (min-width:1200px) {
+    @include desctop {
         &::after {
             width: 113px;
         } 

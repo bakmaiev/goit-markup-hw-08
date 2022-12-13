@@ -5,7 +5,8 @@
   --black-color: #000;
   --secondary-color: #757575;
   --rare-grey-color: #F5F4FA;
-  --primary-background-color: #2F303A ;
+  --primary-background-color: #2F303A;
+  --hero-grdnt: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 .visually-hidden {
@@ -378,13 +379,9 @@ body {
 .section__title {
   text-align: center;
   font-weight: 700;
+  font-size: 28px;
   line-height: 1.17;
-}
-@media screen and (max-width: 767px), (min-width: 768px) {
-  .section__title {
-    margin-bottom: 30px;
-    font-size: 28px;
-  }
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .section__title {
@@ -428,12 +425,12 @@ body {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .site-nav {
     margin-left: 88px;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .site-nav {
     margin-left: 93px;
   }
@@ -681,25 +678,25 @@ body {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
+  background-image: var(--hero-grdnt), url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile2x.jpg);
+    background-image: var(--hero-grdnt), url(../images/hero-mobile2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
+    background-image: var(--hero-grdnt), url(../images/hero-tablet.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet2x.jpg);
+    background-image: var(--hero-grdnt), url(../images/hero-tablet2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -707,12 +704,12 @@ body {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-image: var(--hero-grdnt), url(../images/hero.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero2x.jpg);
+    background-image: var(--hero-grdnt), url(../images/hero2x.jpg);
   }
 }
 
@@ -764,10 +761,8 @@ body {
 .features-list__item {
   width: 100%;
 }
-@media screen and (max-width: 767px) {
-  .features-list__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.features-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .features-list__item {
@@ -943,12 +938,10 @@ body {
   fill: var(--white-color);
 }
 
-@media screen and (max-width: 767px), (min-width: 768px) {
-  .clients-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 @media screen and (min-width: 1200px) {
   .clients-list {
@@ -958,11 +951,9 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .clients-list__item {
-    width: calc((100% - 30px) / 2);
-    height: 92px;
-  }
+.clients-list__item {
+  width: calc((100% - 30px) / 2);
+  height: 92px;
 }
 @media screen and (min-width: 768px) {
   .clients-list__item {
@@ -1240,7 +1231,7 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 768px), (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .projects {
     display: flex;
     flex-wrap: wrap;

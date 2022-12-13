@@ -1,12 +1,12 @@
 .features-list {
     // @extend %list;
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
     };
 
-    @media screen and (min-width: 1200px) {
+    @include desctop {
         display: flex;
         gap: 30px;
     }
@@ -14,19 +14,16 @@
 
 .features-list__item {
     width: 100%;
+    &:not(:last-child) {
+        margin-bottom: 30px;};
 
-    @media screen and (max-width: 767px) {
-        &:not(:last-child) {
-            margin-bottom: 30px;}
-    };
-
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: calc((100% - 30px)/2);
     };
 
-    @media screen and (min-width: 1200px) {
+    @include desctop {
         width: calc((100% - 90px)/4);
-    }
+    };
 
     &::before {
     content: '';
